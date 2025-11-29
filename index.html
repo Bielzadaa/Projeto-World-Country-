@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>World Country</title>
+  <link rel="stylesheet" href="world.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- CABEÇALHO -->
+  <header>
+    <nav class="navbar">
+    <ul class="nav-center">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="colecao.html">Coleção</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="contato.html">Contato</a></li>
+    </ul>
+
+    <div class="nav-right">
+        <!-- Ícone Login -->
+        <a href="login.html" class="icon login-icon" aria-label="Login">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <path d="M12 12a5 5 0 100-10 5 5 0 000 10zM4 20c0-4 4-7 8-7s8 3 8 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </a>
+
+        <!-- Ícone Carrinho -->
+        <a href="carrinho.html" class="icon cart-icon" aria-label="Carrinho">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <path d="M3 3h2l.4 2M7 13h10l3-8H6.4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="10.5" cy="19.5" r="1.5" fill="currentColor"/>
+                <circle cx="17.5" cy="19.5" r="1.5" fill="currentColor"/>
+            </svg>
+        </a>
+    </div>
+</nav>
+
+</header>
+
+  <!-- HERO: vídeo simulando carrossel -->
+  <section class="hero">
+    <!-- vídeo com placeholder (substitua VIDEO_AQUI.mp4 pelo seu arquivo) -->
+    <video id="heroVideo" autoplay muted loop playsinline poster="" >
+      <source src="VIDEO_AQUI.mp4" type="video/mp4">
+      <!-- sem vídeo: mostra camada de texto -->
+      Seu navegador não suporta vídeo — coloque um arquivo em VIDEO_AQUI.mp4
+    </video>
+    <div class="hero-overlay">
+      <h1>NOVA MODA 2025 COUNTRY</h1>
+      <button onclick="document.getElementById('produtos-grid').scrollIntoView({behavior:'smooth'})">Ver Agora</button>
+    </div>
+  </section>
+
+  <!-- PRODUTOS (amostras) -->
+  <section class="produtos" id="produtos-grid">
+    <!-- Produto 1 -->
+    <div class="produto" data-id="1" data-name="Camisa Country Básica" data-price="99.9" data-colors='["Branco","Preto","Vermelho"]' data-sizes='["PP","P","M","G","GG"]' data-gender="masculina" data-category="roupas">
+      <!-- sem imagens: usar atributo data-img para depois inserir -->
+      <img src="" alt="IMAGEM_AQUI" data-img="IMAGEM_AQUI">
+      <h3>Camisa Country Básica</h3>
+      <p>R$ 99,90</p>
+      <button class="btn-detalhes">Ver/Selecionar</button>
+      <button class="btn-add">Comprar</button>
+    </div>
+
+    <!-- Produto 2 -->
+    <div class="produto" data-id="2" data-name="Camiseta Gola Polo" data-price="159.9" data-colors='["Azul","Cinza"]' data-sizes='["P","M","G"]' data-gender="feminina" data-category="roupas">
+      <img src="" alt="IMAGEM_AQUI" data-img="IMAGEM_AQUI">
+      <h3>Camiseta Gola Polo</h3>
+      <p>R$ 159,90</p>
+      <button class="btn-detalhes">Ver/Selecionar</button>
+      <button class="btn-add">Comprar</button>
+    </div>
+
+    <!-- Você pode duplicar blocos de produto aqui -->
+  </section>
+
+  <!-- Modal de produto -->
+  <div id="produto-modal" class="modal hidden">
+    <div class="modal-content">
+      <button class="close-modal" id="close-modal">X</button>
+      <div id="modal-body">
+        <!-- Preenchido via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- RODAPÉ -->
+  <footer>
+    <p>© 2025 World Country - Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="world.js"></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Coleção - World Country</title>
+  <link rel="stylesheet" href="world.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <header>
+   <nav class="navbar">
+    <ul class="nav-center">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="colecao.html">Coleção</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="contato.html">Contato</a></li>
+    </ul>
+
+    <div class="nav-right">
+        <!-- Ícone Login -->
+        <a href="login.html" class="icon login-icon" aria-label="Login">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <path d="M12 12a5 5 0 100-10 5 5 0 000 10zM4 20c0-4 4-7 8-7s8 3 8 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </a>
+
+        <!-- Ícone Carrinho -->
+        <a href="carrinho.html" class="icon cart-icon" aria-label="Carrinho">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <path d="M3 3h2l.4 2M7 13h10l3-8H6.4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="10.5" cy="19.5" r="1.5" fill="currentColor"/>
+                <circle cx="17.5" cy="19.5" r="1.5" fill="currentColor"/>
+            </svg>
+        </a>
+    </div>
+</nav>
+
+
+</header>
+
+
+  <section class="filtros">
+  
+    <div class="filtro-row">
+      <label>Gênero:</label>
+      <select id="filtro-genero">
+        <option value="todos">Todos</option>
+        <option value="masculina">Masculina</option>
+        <option value="feminina">Feminina</option>
+      </select>
+
+      <label>Categoria:</label>
+      <select id="filtro-categoria">
+        <option value="todos">Todas</option>
+        <option value="roupas">Roupas Country</option>
+        <option value="botas">Botas</option>
+        <option value="acessorios">Acessórios</option>
+      </select>
+
+      <input type="text" id="buscar-produto" placeholder="Buscar produto...">
+      <button id="aplicar-filtro">Aplicar</button>
+    </div>
+  </section>
+
+  <section class="produtos" id="colecao-grid">
+    <!-- Exibimos produtos via HTML estático (mesma estrutura que index) -->
+    <div class="produto" data-id="1" data-name="Camisa Country Básica" data-price="129.9" data-colors='["Branco","Preto","Vermelho"]' data-sizes='["PP","P","M","G","GG"]' data-gender="masculina" data-category="roupas'>
+      <img src="" alt="IMAGEM_AQUI" data-img="IMAGEM_AQUI">
+      <h3>Estilo Country</h3>
+      <p>R$ 129,90</p>
+      <button class="btn-detalhes">Ver/Selecionar</button>
+      <button class="btn-add">Adicionar ao carrinho</button>
+    </div>
+
+    <div class="produto" data-id="3" data-name="Bota Country Clássica" data-price="299.9" data-colors='["Marrom","Preto"]' data-sizes='["38","39","40","41","42"]' data-gender="masculina" data-category="botas">
+      <img src="" alt="IMAGEM_AQUI" data-img="IMAGEM_AQUI">
+      <h3>Bota Country Clássica</h3>
+      <p>R$ 299,90</p>
+      <button class="btn-detalhes">Ver/Selecionar</button>
+      <button class="btn-add">Adicionar ao carrinho</button>
+    </div>
+
+    <div class="produto" data-id="4" data-name="Chapéu Country" data-price="79.9" data-colors='["Bege","Preto"]' data-sizes='["Único"]' data-gender="todos" data-category="acessorios">
+      <img src="" alt="IMAGEM_AQUI" data-img="IMAGEM_AQUI">
+      <h3>Chapéu Country</h3>
+      <p>R$ 79,90</p>
+      <button class="btn-detalhes">Ver/Selecionar</button>
+      <button class="btn-add">Adicionar ao carrinho</button>
+    </div>
+
+    <!-- Acrescente mais produtos conforme necessário -->
+  </section>
+
+  <!-- Reaproveita modal do index (world.js) -->
+  <div id="produto-modal" class="modal hidden">
+    <div class="modal-content">
+      <button class="close-modal" id="close-modal-colecao">X</button>
+      <div id="modal-body-colecao"></div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 World Country - Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="world.js"></script>
+</body>
+</html>
+

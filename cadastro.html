@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - World Country</title>
+  <link rel="stylesheet" href="world.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <header>
+  <nav class="navbar">
+    <ul class="nav-center">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="colecao.html">Coleção</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="contato.html">Contato</a></li>
+    </ul>
+
+    <div class="nav-right">
+        <!-- Ícone Login -->
+        <a href="login.html" class="icon login-icon" aria-label="Login">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <path d="M12 12a5 5 0 100-10 5 5 0 000 10zM4 20c0-4 4-7 8-7s8 3 8 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </a>
+
+        <!-- Ícone Carrinho -->
+        <a href="carrinho.html" class="icon cart-icon" aria-label="Carrinho">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <path d="M3 3h2l.4 2M7 13h10l3-8H6.4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="10.5" cy="19.5" r="1.5" fill="currentColor"/>
+                <circle cx="17.5" cy="19.5" r="1.5" fill="currentColor"/>
+            </svg>
+        </a>
+    </div>
+</nav>
+</header>
+
+
+  <section class="auth">
+    <h2>Entrar</h2>
+    <form id="login-form">
+      <label>Email:</label>
+      <input id="login-email" type="email" required>
+      <label>Senha:</label>
+      <input id="login-password" type="password" required>
+      <button type="submit">Entrar</button>
+    </form>
+
+    <p>Não tem conta? <a href="cadastro.html">Cadastre-se</a></p>
+    <div id="login-feedback"></div>
+  </section>
+
+  <footer>
+    <p>© 2025 World Country - Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="world.js"></script>
+</body>
+</html>
